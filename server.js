@@ -190,7 +190,7 @@ io.on('connection', (socket) => {
     io.sockets.emit('receiveMessageFromGroup', message);
   });
 
-    // 监听客户端发送的群发消息
+    // 监听客户端发送的room1消息
     socket.on('sendMessageRoom1', (content) => {
       console.log(`${name} send a message to room1: ${content}`);
       const message = {
@@ -199,12 +199,12 @@ io.on('connection', (socket) => {
       };
       // 记录消息
      history1.push(message);
-      // 向所有客户端广播这条消息
+      // 向room1客户端广播这条消息
       io.sockets.in('room1').emit('receiveMessageFromRoom1', message);
     });
 
 
-      // 监听客户端发送的群发消息
+      // 监听客户端发送的room2消息
   socket.on('sendMessageRoom2', (content) => {
     console.log(`${name} send a message to room2: ${content}`);
     const message = {
@@ -213,12 +213,12 @@ io.on('connection', (socket) => {
     };
     // 记录消息
     history2.push(message);
-    // 向所有客户端广播这条消息
+    // 向room2客户端广播这条消息
     io.sockets.in('room2').emit('receiveMessageFromRoom2', message);
   });
 
 
-    // 监听客户端发送的群发消息
+    // 监听客户端发送的room3消息
     socket.on('sendMessageRoom3', (content) => {
       console.log(`${name} send a message to room3: ${content}`);
       const message = {
@@ -227,12 +227,12 @@ io.on('connection', (socket) => {
       };
       // 记录消息
      history3.push(message);
-      // 向所有客户端广播这条消息
+      // 向room3客户端广播这条消息
       io.sockets.in('room3').emit('receiveMessageFromRoom3', message);
     });
 
 
-      // 监听客户端发送的群发消息
+      // 监听客户端发送的room4消息
   socket.on('sendMessageRoom4', (content) => {
     console.log(`${name} send a message to room4: ${content}`);
     const message = {
@@ -241,12 +241,12 @@ io.on('connection', (socket) => {
     };
     // 记录消息
     history4.push(message);
-    // 向所有客户端广播这条消息
+    // 向room4客户端广播这条消息
     io.sockets.in('room4').emit('receiveMessageFromRoom4', message);
   });
 
 
-    // 监听客户端发送的群发消息
+    // 监听客户端发送的room5
     socket.on('sendMessageRoom5', (content) => {
       console.log(`${name} send a message to room5: ${content}`);
       const message = {
@@ -255,11 +255,11 @@ io.on('connection', (socket) => {
       };
       // 记录消息
       history5.push(message);
-      // 向所有客户端广播这条消息
+      // 向room5客户端广播这条消息
       io.sockets.in('room5').emit('receiveMessageFromRoom5', message);
     });
 
-      // 监听客户端发送的群发消息
+      // 监听客户端发送的room6消息
   socket.on('sendMessageRoom6', (content) => {
     console.log(`${name} send a message to room6: ${content}`);
     const message = {
@@ -268,18 +268,16 @@ io.on('connection', (socket) => {
     };
     // 记录消息
     history6.push(message);
-    // 向所有客户端广播这条消息
+    // 向room6客户端广播这条消息
     io.sockets.in('room6').emit('receiveMessageFromRoom6', message);
   });
-
-
 
   // 客户端断开连接
   socket.on('disconnect', (reason) => {
     console.log(`${name} disconnected, reason: ${reason}`);
     onlineusers.delete(name);
     // 通知所有客户端更新聊天列表
-    io.sockets.in('room1').emit('online', [...onlineusers.keys()]);
+    io.sockets.emit('online', [...onlineusers.keys()]);
   });
 
 });
