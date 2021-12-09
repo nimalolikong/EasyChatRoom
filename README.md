@@ -37,7 +37,7 @@
 <img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
 
 ####  登录用户为永梦，在线人数为两人  
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表2.png" width="400px">   
 
 这里需要注意的是，我将所有用户信息都提前存储在了服务端这边，客户端每次访问时会在客户端本地进行一个备份，方便接下来的一堆操作  
 最后就是消息渲染，群聊消息很好实现，单聊主要是需要使用分组方法让用户加入对应分组，服务端只向对应分组发消息  
