@@ -204,7 +204,9 @@ function renderFriend(userinfo){
 
     if(userinfo.state === ONLINE){
       userstateEl.style.backgroundColor = "#00FF00";
-    };
+    }else{
+      userstateEl.style.backgroundColor = "red";
+    }
     liEl.classList.add('contact-item'); //添加类名
     liEl.append(userinfoEl,userstateEl);//装入两个子元素盒子
     friendlistEl.appendChild(liEl);
@@ -226,11 +228,15 @@ function updateUserstate(onlineusers){
 
   friendlistEl.innerHTML = '';//清空朋友列表
   usersLocalInfo.forEach((userinfo)=>{//两次遍历，找到本地用户信息中的用户列表在线部分，更新对应的状态值
+    //每次渲染都要先将登录状态调整为离线，防止上一次的调用的值没有清空，导致明明离线却状态为ONLINE，导致渲染出错
+    userinfo.state = OFFLINE;
     onlineusers.forEach((onlineuser)=>{
       console.log('online user:',onlineuser);
-      if(userinfo.username === onlineuser){
+
+      if(userinfo.username === onlineuser && userinfo.state === OFFLINE){
         userinfo.state = ONLINE;
-        };
+        }
+
     });
     if(userinfo.username !== userlocalname){//每次更新状态重新渲染朋友列表
       renderFriend(userinfo)};
