@@ -64,19 +64,19 @@ socket.emit('chrome');
 这里只需要在建立独立的*history[]* 数组实现分组存储就实现了单聊，具体实现过程可见*server.js* 和*index.js* 文件的代码注释
 最后的项目成果展现如下
 #### 登录成功
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/登录成功.png" width="400px">   
 
 #### 登录失败
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/登录失败.png" width="400px">   
 
-#### 登录成功
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+#### 群聊
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/群聊.png" width="400px">   
 
-#### 登录成功
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+#### 单聊1
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/单聊1.png" width="400px">   
 
-#### 登录成功
-<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/聊天列表1.png" width="400px">   
+#### 单聊2
+<img src="https://github.com/nimalolikong/EasyChatRoom/blob/main/images/单聊2.png" width="400px">   
 
 
 
