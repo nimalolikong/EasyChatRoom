@@ -1,0 +1,239 @@
+/*登录界面样式*/
+*{
+    box-sizing: border-box;
+  
+  }
+  .window{
+      width: 800px;
+      height: 800px;
+      background-image: linear-gradient(#2E64FE,#58FAF4);
+      position: fixed;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+  }
+  .loginbox{
+      background: white;
+      width: 500px;
+      border-radius: 4px;
+      padding: 50px 100px;
+      border: 1px solid #ccc;
+      position: fixed;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+  }
+  .formtitle{
+      font-size: 26px;
+      text-align: center;
+  
+  }
+  .formitem{
+      
+      margin-bottom: 30px;
+  }
+  .formbtn{
+      background:blue;
+      width: 100%;
+      border: none;
+      padding: 6px;
+      color:white;
+      border-radius: 4px;
+  
+  
+  
+  } 
+  .formlabel{
+      display: inline-block;
+      width: 70px;
+  }
+  .forminput{
+      display: inline-block;
+      width: 222px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+  
+  }
+  .forminput:focus{
+   outline-color:  blue; 
+  
+  } 
+  
+  
+  
+  
+  
+  
+  /*主界面样式*/
+  
+  .chatroom {
+  
+    display: flex;
+    width: 800px;
+    height: 800px;
+    background: #ececec;
+    border: 1px solid #ccc;
+    
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease;
+  }
+  
+  
+  .contact {
+    
+    width: 150px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .contact-name {
+    font-size: 26px;
+    padding: 10px;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .contact-state{
+    
+    margin-top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .contact-list-content{
+    
+    width: 100px;
+    overflow: hidden;
+  }
+  .contact-item {
+    display: flex;
+    width: 140px;
+    border-bottom: 1px solid #666;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .contact-group-item {
+    display: flex;
+    width: 140px;
+    border-bottom: 1px solid #666;
+    padding: 10px;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  .online-box{
+    text-align: center;
+    font-size: small;
+    color: gray;
+    height:6px;
+  }
+  .online-number{
+    color:#70c9f3;
+  
+  }
+  .list {
+    flex-grow: 1;
+    padding: 10px 0;
+    overflow: scroll;
+  }
+  
+  .right-info-div{
+      display: flex;
+    font-size: small;
+    justify-content: right;
+    color:gray;
+  }
+  .left-info-div{
+      display: flex;
+    font-size: small;
+    justify-content: left;
+    color:gray;
+  }
+  .list-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+  
+  .list-item .message {
+    background-color: #70c9f3;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 8px 0px 8px 8px;
+    font-size: 14px;
+  }
+  
+  .list-item .avatar {
+    width: 30px;
+    height: 30px;
+    
+    margin-left: 5px;
+  
+  }
+  
+  .list-item-right {
+    justify-content: left;
+  }
+  
+  .list-item-right .avatar {
+    margin-right: 5px;
+    margin-left: 0;
+  }
+  
+  .list-item-right .message {
+    background: #fff;
+    border-radius: 0px 8px 8px 8px;
+  }
+  
+  .footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .footer textarea {
+    font-size: large;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px 0px 8px 8px;
+  }
+  .footer textarea:focus{
+    flex-grow: 1;
+    border-radius: 8px 0px 8px 8px;
+    outline-color: #70c9f3;
+  }
+  .footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0 20px;
+    margin-left: 20px;
+    border-radius: 4px;
+  }
+  .footer button:active{
+    background-color: #2E64FE;
+    color:white;
+  }

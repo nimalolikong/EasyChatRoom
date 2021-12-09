@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天室界面</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="window" id="window">
+        <div class="loginbox" >
+            <h3 class="formtitle">账号登陆</h3>
+            <div class="formitem">
+                <div class="formlabel" >用户名：</div> 
+                <input class="forminput"type="text" id = "username" placeholder="请输入用户名" >
+                <div class="formlabel"> 密码：</div>
+                <input class="forminput" type="password" id="password" placeholder="请输入密码">
+    
+            </div>
+            <div class="formitem">
+                <button class="formbtn" id= "login">登录</button>
+            </div>
+        </div>
+    </div>
+    <!-- 主框架-->
+    <div class="chatroom" id="chatroom">
+        <!-- 联系人列表区-->
+        <div class="contact">
+            <div class="contact-name" >ChatRoom</div>
+            <ul class="contact-list">
+                <li class="contact-item" id="group">群聊</li>
+            </ul><!--群聊-->
+            <ul class="contact-list" id="friend-list">
+            </ul><!--注入朋友列表-->
+        </div>
+        <!-- 主显示区-->
+        <div class="main">
+
+            <div class="header" >
+                <div id="friend-info">群聊</div>
+               <div class="online-box"> <span>当前在线人数为：</span><span class="online-number">0</span><span> 人</span></div>
+            </div>
+            <div class="list" id="friend-info-list"></div>
+            <div class="footer">
+                <textarea id="msg-input"></textarea>
+                <button id="btn-send">发送/Enter</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="index.js"></script>
+   
+</body>
+</html>
